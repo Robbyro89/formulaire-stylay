@@ -1,29 +1,54 @@
-<h2>Sign up</h2>
+<section class="all">
 
+  <div class="left">
+    <div class="titre">
+      <h1>uniform</h1>
+      <p id="sstitre">L'inscription devient plus simple</p>
+      <hr>
+    </div>
+
+    <table class="list">
+      <tr>
+        <td><%= image_tag ("file.png") %></td>
+        <td>Un seul formulaire pour toutes les ecoles</td>
+      </tr>
+
+      <tr>
+        <td><%= image_tag ("school_hat.png") %></td>
+        <td>Gerez facilement vos candidatures</td>
+      </tr>
+
+      <tr>
+        <td><%= image_tag ("cloud.png") %></td>
+        <td>Stockez vos donees scolaires</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="right">
+    <div class="form">
+      <p>Remplir tous les champs</p>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+      <div class="field">
+        <input type="text" name="email" placeholder="Adresse Email"><br/>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <div class="field">
+        <input type="password" name="password" placeholder="Mot de passe">
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+      <div class="field">
+        <input type="password" name="password_confirmation" placeholder="Confirmation">
+      </div>
+<br>
+      <div class="actions">
+        <%= f.submit "Creez votre compte", :class => "btn btn-primary" %>
+      </div>
 <% end %>
+    </div>
+      <p id="deja">Déjà inscrit ?</p>
+      <%= button_to 'Connectez-vous', new_user_session_path, {method: 'get', class: "button"} %>
+  </div>
 
-<%= render "devise/shared/links" %>
+</section>
