@@ -1,17 +1,22 @@
-<ul>
-	<% if user_signed_in? %>
-	<li>
-		<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-	</li>
-	<li>
-		<p>Merci de t'etre inscrit(e) <%= current_user.email %></p>
-	</li>
-	<% else %>
-	<li>
-		<%= link_to "Sign In", new_user_session_path %>
-	</li>
-	<li>
-		<%= link_to "Sign Up", new_user_registration_path %>
-	</li>
-	<% end %>
-</ul>
+<div class="jumbotron" id="jumbo">
+	<ul>
+		<% if user_signed_in? %>
+		<li>
+			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+		</li>
+		<li>
+			<p>Merci de t'etre inscrit(e) <%= current_user.email %></p>
+		</li>
+
+		<% else %>
+
+		<div class="field" id="link">
+			<%= link_to "Sign Up", new_user_registration_path, :class => "btn", id: "butt" %>
+		</div>
+<br>
+		<p>Il n'y a pas de Sign In, car le but de l'exo<br>
+		est de re-creer une page Sign Up...<br>
+		Toutefois, il y aura un lien Sign In dans la page Sign Up</p>
+		<% end %>
+	</ul>
+</div>

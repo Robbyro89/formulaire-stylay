@@ -14,6 +14,8 @@
  *= require_self
  */
 
+/* Page SignUp */
+
  body {
    height: 100%;
    width: 100%;
@@ -114,7 +116,36 @@
    display: none;
  }
 
- input[type=text] {
+#email {
+  width: 200%;
+  height: 5vh;
+  text-indent: 20px;
+  font-size: 80%;
+  margin: 0;
+  padding: 8px 8px 8px 15px;
+  color: #000000;
+  background-image: url(asset-path('person_black.png'));
+  background-repeat: no-repeat;
+  background-position: left;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px 6px 0 0;
+}
+
+#password {
+  width: 200%;
+  height: 5vh;
+  text-indent: 20px;
+  font-size: 80%;
+  margin: 0;
+  padding: 8px 8px 8px 15px;
+  color: #000000;
+  background-image: url(asset-path('lock_black.png'));
+  background-repeat: no-repeat;
+  background-position: left;
+  border: 1px solid #A9A9A9;
+ }
+
+ #confirmation {
    width: 200%;
    height: 5vh;
    text-indent: 20px;
@@ -122,35 +153,6 @@
    margin: 0;
    padding: 8px 8px 8px 15px;
    color: #000000;
- }
-
-
- input[type=password] {
-   width: 200%;
-   height: 5vh;
-   text-indent: 20px;
-   font-size: 80%;
-   margin: 0;
-   padding: 8px 8px 8px 15px;
-   color: #000000;
- }
-
-  input[name=email] {
-   background-image: url(asset-path('person_black.png'));
-   background-repeat: no-repeat;
-   background-position: left;
-   border: 1px solid #A9A9A9;
-   border-radius: 6px 6px 0 0;
- }
-
- input[name=password] {
-   background-image: url(asset-path('lock_black.png'));
-   background-repeat: no-repeat;
-   background-position: left;
-   border: 1px solid #A9A9A9;
- }
-
- input[name=password_confirmation] {
    background-image: url(asset-path('lock_black.png'));
    background-repeat: no-repeat;
    background-position: left;
@@ -191,3 +193,73 @@
    font-style: italic;
    color: #606060;
  }
+
+/* Page LogIn */
+
+.jumbotron {
+  background-color: #0099FF;
+  color: #FFFFFF;
+  padding: 80px;
+  margin: 80px;
+  padding-bottom: 20px;
+  border: 1px solid #0099FF;
+  border-radius: 6px;
+}
+
+.container {
+  padding-bottom: 20px;
+}
+
+#email2 {
+  width: 300px;
+  height: 5vh;
+  text-indent: 20px;
+  font-size: 80%;
+  margin: 0;
+  padding: 8px 8px 8px 15px;
+  color: #000000;
+  background-image: url(asset-path('person_black.png'));
+  background-repeat: no-repeat;
+  background-position: left;
+  border: 1px solid #A9A9A9;
+  border-radius: 6px 6px 0 0;
+}
+
+#password2 {
+  width: 300px;
+  height: 5vh;
+  text-indent: 20px;
+  font-size: 80%;
+  margin: 0;
+  padding: 8px 8px 8px 15px;
+  color: #000000;
+  background-image: url(asset-path('lock_black.png'));
+  background-repeat: no-repeat;
+  background-position: left;
+  border: 1px solid #A9A9A9;
+  border-radius: 0 0 6px 6px;
+}
+
+#boutton{
+  width: 325px;
+  height: 8vh;
+  font-size: 70%;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  color: #0099FF;
+  border: 1px solid #0099FF;
+  border-radius: 6px;
+}
+
+/* Page Index */
+
+#jumbo {
+  padding: 100px;
+  margin: 50px;
+}
+
+#link {
+  text-align: center;
+  margin-right: 30px;
+  font-size: 50px;
+}
